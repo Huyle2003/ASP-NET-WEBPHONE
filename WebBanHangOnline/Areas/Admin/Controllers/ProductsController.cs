@@ -115,11 +115,16 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
                 var checkImg = item.ProductImage.Where(x => x.ProductId == item.Id);
                 if (checkImg != null)
                 {
-                    foreach(var img in checkImg)
+                    try
                     {
-                        db.ProductImages.Remove(img);
-                        db.SaveChanges();
+                        foreach (var img in checkImg)
+                        {
+                            db.ProductImages.Remove(img);
+                            db.SaveChanges();
+                        }
                     }
+                    catch (Exception ex)
+                    { }
                 }
                 db.Products.Remove(item);
                 db.SaveChanges();
