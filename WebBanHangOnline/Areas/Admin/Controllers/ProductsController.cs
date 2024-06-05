@@ -39,6 +39,10 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Add(Product model, List<string> Images, List<int> rDefault)
         {
+            if (db.Products.Any(p => p.Title == model.Title))
+            {
+                ModelState.AddModelError("Title", "Product already exists.");
+            }
             if (ModelState.IsValid)
             {
                 if (Images != null && Images.Count > 0)
