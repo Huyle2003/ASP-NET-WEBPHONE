@@ -819,15 +819,15 @@ section
 3.7 Main Slider
 *********************************/
 
-.main_slider
-{
-	width: 100%;
+.main_slider {
+	width: 80%;
 	height: 700px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 	margin-top: 150px;
 }
+
 .main_slider_content
 {
 	width: 60%;

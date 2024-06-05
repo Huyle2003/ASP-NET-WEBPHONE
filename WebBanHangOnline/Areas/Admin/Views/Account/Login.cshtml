@@ -7,7 +7,7 @@
 }
 
 <div class="card-body login-card-body">
-    <p class="login-box-msg">Sign in to start your session</p>
+    <p class="login-box-msg">Đăng nhập để bắt đầu phiên của bạn</p>
     @using (Html.BeginForm("Login", "Account", FormMethod.Post))
     {
         @Html.AntiForgeryToken()
@@ -50,9 +50,9 @@
 
     <!-- /.social-auth-links -->
 
-    <p class="mb-1">
+    @*<p class="mb-1">
         <a href="#">I forgot my password</a>
-    </p>
+    </p>*@
     @*<p class="mb-0">
             <a href="register.html" class="text-center">Register a new membership</a>
         </p>*@
